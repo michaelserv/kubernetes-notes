@@ -13,6 +13,7 @@ replace in `kubectl set image` command <Container-Name>
 # Update Deployment - SHOULD WORK NOW
 kubectl set image deployment/<Deployment-Name> <Container-Name>=<Container-Image> --record=true
 kubectl set image deployment/my-first-deployment hello=mylandmarktech/hello:1 --record=true
+  
   # Verify Rollout Status 
   kubectl get pod
   
