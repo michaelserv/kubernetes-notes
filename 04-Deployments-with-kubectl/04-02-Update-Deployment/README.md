@@ -10,14 +10,14 @@
 - **Observation:** Please Check the container name in `spec.container.name` yaml output and make a note of it and 
 replace in `kubectl set image` command <Container-Name>
 ```
-# Get Container Name from current deployment
-kubectl get deployment my-first-deployment -o yaml
-
 # Update Deployment - SHOULD WORK NOW
 kubectl set image deployment/<Deployment-Name> <Container-Name>=<Container-Image> --record=true
 kubectl set image deployment/my-first-deployment hello=mylandmarktech/hello:1 --record=true
   # Verify Rollout Status 
   kubectl get pod
+  
+# Get Container Name from current deployment
+kubectl get deployment my-first-deployment -o yaml  
 ```
 ### Verify Rollout Status (Deployment Status)
 - **Observation:** By default, rollout happens in a rolling update model, so no downtime.
