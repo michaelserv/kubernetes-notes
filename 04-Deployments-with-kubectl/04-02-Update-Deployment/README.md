@@ -17,6 +17,9 @@ kubectl set image deployment/my-first-deployment hello=mylandmarktech/hello:1 --
   # Verify Rollout Status 
   kubectl get pod
   
+  # Verify ReplicaSet
+kubectl get rs
+  
 # Get Container Name from current deployment
 kubectl get deployment my-first-deployment -o yaml  
 ```
